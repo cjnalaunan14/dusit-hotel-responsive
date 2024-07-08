@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Image/icon.png">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dusit</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Madimi+One&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: roboto;
+        cursor: pointer;
+    }
+        /* Section Content-1 */
+        .content-1 {
+        position: relative;
+        height: 100vh;
+        background-image: url(Image/GalleryFront.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .content-1:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 0; 
+    }
+
+    /* Navigation Bar - 1*/
+    .content-1 .header {
+        position: fixed;
+        display: flex;
+        justify-content: space-around; 
+        align-items: center;
+        padding: 3%;
+        height: 7%;
+        width: 100%;
+        z-index: 1; 
+        transition: background-color 0.5s ease, transform 0.5s ease;
+    }
+
+    /* Navigation Bar - Scrolled */
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: #8c744c;
+        
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .bx:hover {
+        color: darkgray;
+    }
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+    width: 100%;
+    background-color: #8c744c;
+}
+    /* ------- */
+
+
+    .content-1 .header .left,
+    .content-1 .header .right {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Logo */
+    .content-1 .header .logo {
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .header .logo a {
+        color: white;
+        font-size: 3rem;
+        font-family: 'Averia Serif Libre';
+        font-weight: bold;
+        transition: color 0.5s ease-in-out;
+    }
+
+    .content-1 .header a {
+        text-decoration: none;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .content-1 .header .nav-icon {
+        color: white;
+        font-size: 2rem;
+    }
+    
+    .content-1 .header .bx {
+        transition: 0.5s ease;
+    }
+
+    .content-1 .nav-bar {
+        display: flex;
+        align-items: center;
+    }
+
+    .content-1 .nav-bar ul {
+        display: flex;
+        list-style: none;
+        gap: 3rem; 
+    }
+
+    .content-1 .nav-bar ul li {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .content-1 .nav-bar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        transition: color 0.5s ease-in-out;
+    }
+
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: #8c744c;
+        
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .bx:hover {
+        color: darkgray;
+    }
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+    width: 100%;
+    background-color: #8c744c;
+}
+
+    /* Navigation Bar - Hover */
+    ul li .nav-list:before {
+        content: "";
+        background: white;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        width: 0;
+        bottom: 0px;
+        transition: width 0.5s ease, background-color 0.5s ease-in-out;
+    }
+
+    ul li .nav-list:hover::before {
+        width: 100%;
+    }
+
+    ul li .bx:hover {
+        color: #ccbcac;
+        transition: color 0.5s ease-in-out;
+    }
+
+    /* Navigation Bar */
+    .header--hidden {
+        transform: translateY(-100%);
+        box-shadow: none;
+    }
+    /* Reserve - Hover */
+    .content-1 .header .reserve {
+        background: white;
+        color: black;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-radius: 0.5rem;
+        font-size: 0.7rem;
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    }
+
+    .content-1 .header .reserve:hover {
+        background: #ccbcac;
+        color: white;
+        text-decoration: none;
+        transition: color 0.5s ease-in-out;
+    }
+
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: #8c744c;
+        
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: #8c744c;
+    }
+
+
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+    width: 100%;
+    background-color: #8c744c;
+}
+
+
+    /* Alignment User */
+    .content-1 .nav-bar ul li .nav-icon {
+        margin: 0 0 0 80%;
+    }
+
+    /* Main Content-1 */
+    
+    .main-content-1{
+        height: 100vh;
+        position: relative;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+    }
+
+
+    .main-content-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    .main-content-1 .content-home-1 {
+        font-family: "Sorts Mill Goudy", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 4rem;
+        margin: 0.5rem 0 0 0;
+    }
+
+    .main-content-1 .content-home-2 {
+        font-family: "Sorts Mill Goudy", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+        margin: 0 0 1rem 0;
+    }
+
+    .main-content-1 .content-home-3 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 4rem;
+    }
+
+
+    .close:hover, .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: #8c744c;
+        
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .bx:hover {
+        color: darkgray;
+    }
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+    width: 100%;
+    background-color: #8c744c;
+    }
+
+
+
+    .gallery {
+        height: 120rem;
+    }
+
+    .gallery-nav-bar {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+}
+
+    .gallery-nav-bar ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .gallery-nav-bar ul li {
+        list-style: none;
+        position: relative; 
+    }
+
+    .gallery-nav-bar a {
+        text-decoration: none;
+        color: #8c744c;
+        position: relative; 
+    }
+
+    .gallery-nav-bar a::after {
+        content: "";
+        background: #8c744c;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        width: 0;
+        bottom: -4px;
+        transition: width 0.5s ease-in-out;
+    }
+
+    .gallery-nav-bar a:hover::after,
+    .gallery-nav-bar a.active::after {
+        width: 100%;
+    }
+
+    .gallery-nav-bar a.active {
+        color: #8c744c;
+    }
+
+    .gallerypicture1 {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center; 
+        gap: 1rem; 
+        flex-wrap: wrap;
+    }
+
+    .gallerypicture1 img {
+        width: 25%;
+        height: auto;
+    }
+        /* Footer */
+
+        .footer-distributed{
+        background: url(Image/footerimg.png) no-repeat;
+        background-size: cover;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+        font: bold 16px sans-serif;
+        padding: 55px 50px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    /* Footer left */
+
+    .footer-distributed .footer-left{
+        width: 40%;
+    }
+
+    /* The company logo */
+
+    .footer-distributed h3{
+        color: white;
+        font-size: 3rem;
+        font-family: 'Averia Serif Libre';
+        font-weight: bold;
+    }
+
+    /* Footer links */
+
+    .footer-distributed .footer-links{
+        color:  #ffffff;
+        margin: 20px 0 12px;
+        padding: 0;
+    }
+
+    .footer-distributed .footer-links a{
+        display:inline-block;
+        line-height: 1.8;
+        font-weight:400;
+        text-decoration: none;
+        color:  inherit;
+    }
+
+    .footer-distributed .footer-company-name{
+        color:  white;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    /* Footer Center */
+
+    .footer-distributed .footer-center{
+        width: 35%;
+    }
+
+    .footer-distributed .footer-center i{
+        background-color:#8c744c;
+        color: #ffffff;
+        font-size: 25px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 42px;
+        margin: 10px 15px;
+        vertical-align: middle;
+    }
+
+    .footer-distributed .footer-center i.fa-envelope{
+        font-size: 17px;
+        line-height: 38px;
+    }
+
+    .footer-distributed .footer-center p{
+        display: inline-block;
+        color: #ffffff;
+        font-weight:400;
+        vertical-align: middle;
+        margin:0;
+    }
+
+    .footer-distributed .footer-center p span{
+        display:block;
+        font-weight: normal;
+        font-size:14px;
+        line-height:2;
+    }
+
+    .footer-distributed .footer-center p a{
+        color:  white;
+        text-decoration: none;;
+    }
+
+    .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+    }
+
+    .footer-distributed .footer-links .link-1:before {
+    content: none;
+    }
+
+    /* Footer Right */
+
+    .footer-distributed .footer-right{
+        width: 20%;
+    }
+
+    .footer-distributed .footer-company-about{
+        line-height: 20px;
+        color:  white;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .footer-distributed .footer-company-about span{
+        display: block;
+        color:  #ffffff;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .footer-distributed .footer-icons{
+        margin-top: 25px;
+    }
+
+    .footer-distributed .footer-icons a{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        background-color:#8c744c;
+        border-radius: 2px;
+
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+
+        margin-right: 3px;
+        margin-bottom: 5px;
+    }
+
+    /* If you don't want the footer to be responsive, remove these media queries */
+
+    @media (max-width: 880px) {
+
+        .footer-distributed{
+            font: bold 14px sans-serif;
+        }
+
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right{
+            display: block;
+            width: 100%;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .footer-distributed .footer-center i{
+            margin-left: 0;
+        }
+
+    }
+
+    /* Booking Form */
+    #bookingForm {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+    }
+
+    #bookingForm h2 {
+        text-align: center;
+        font-family: roboto;
+        margin-bottom: 20px;
+    }
+
+    #bookingForm label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #bookingForm input[type="text"],
+    #bookingForm input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #bookingForm button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #8c744c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #bookingForm button:hover {
+        background-color: #ccbcac;
+    }
+    /* Modal Styling */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 30px;
+        position: relative;
+        bottom: 1rem;
+        left: 6.5rem;
+        font-weight: bold;
+
+    }
+
+    .close:hover, .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    @media (max-width:500px){
+        h1 {
+            font-size:1rem;
+        }
+        p{
+            font-size:1rem;
+        }
+        .merge{
+            font-size:1rem;
+
+        }
+    }
+
+    /* Responsive Navigation Toggle */
+.checkbtn {
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    transition: color 0.5s ease-in-out;
+}
+
+#check {
+    display: none;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .content-1 .header {
+        justify-content: space-between;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+
+    .content-1 .nav-bar {
+        display: none; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 4.5rem 0 0 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .content-1 .nav-bar ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        list-style: none;
+        position: static;
+        align-items: center;
+    }
+
+    .content-1 .nav-bar ul li a {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .content-1 .nav-bar ul li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:before {
+        background: transparent;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:hover::before {
+        background: transparent;
+    }
+
+    .content-1 .header .checkbtn {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: white;
+        z-index: 3;
+    }
+
+    .content-1 .header .checkbtn i {
+        font-size: 2.5rem;
+    }
+
+    .content-1 .nav-icon {
+        margin: 0 10rem 0 0;
+    }
+
+    #check:checked ~ .nav-bar {
+        display: flex;
+    }
+
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: white;
+        
+    }
+
+    .content-1 .header.scrolled .checkbtn {
+        color:#8c744c;
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: white;
+    }
+
+    .content-1 .header.scrolled .bx:hover {
+        color: darkgray;
+    }
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+    width: 100%;
+    background-color: #8c744c;
+}
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .content-1 .header {
+        justify-content: space-between;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+
+    .content-1 .nav-bar {
+        display: none; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 4.5rem 0 0 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .content-1 .nav-bar ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        list-style: none;
+        position: static;
+        align-items: center;
+    }
+
+    .content-1 .nav-bar ul li a {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .content-1 .nav-bar ul li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:before {
+        background: transparent;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:hover::before {
+        background: transparent;
+    }
+
+    .content-1 .header .checkbtn {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: white;
+        z-index: 3;
+    }
+
+    .content-1 .header .checkbtn i {
+        font-size: 2.5rem;
+    }
+
+    .content-1 .nav-icon {
+        margin: 0 10rem 0 0;
+    }
+
+    #check:checked ~ .nav-bar {
+        display: flex;
+    }
+
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: white;
+        
+    }
+
+    .content-1 .header.scrolled .checkbtn {
+        color:#8c744c;
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: white;
+    }
+
+    .content-1 .header.scrolled .bx:hover {
+        color: darkgray;
+    }
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+        width: 100%;
+        background-color: #8c744c;
+}
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .content-1 .header {
+        justify-content: space-between;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+
+    .content-1 .nav-bar {
+        display: none; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 4.5rem 0 0 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .content-1 .nav-bar ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        list-style: none;
+        position: static;
+        align-items: center;
+    }
+
+    .content-1 .nav-bar ul li a {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .content-1 .nav-bar ul li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:before {
+        background: transparent;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:hover::before {
+        background: transparent;
+    }
+
+    .content-1 .header .checkbtn {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: white;
+        z-index: 3;
+    }
+
+    .content-1 .header .checkbtn i {
+        font-size: 2.5rem;
+    }
+
+    .content-1 .nav-icon {
+        margin: 0 10rem 0 0;
+    }
+
+    #check:checked ~ .nav-bar {
+        display: flex;
+    }
+
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: white;
+        
+    }
+
+    .content-1 .header.scrolled .checkbtn {
+        color:#8c744c;
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: white;
+    }
+
+    .content-1 .header.scrolled .bx:hover {
+        color: darkgray;
+    }
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+        width: 100%;
+        background-color: #8c744c;
+}
+    .gallerypicture1 img {
+        width: 33.33%;
+    }
+    .gallery {
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .gallerypicture1 img {
+        width: 50%;
+    }
+    .gallery {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-1 .header {
+        justify-content: space-between;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+
+    .content-1 .nav-bar {
+        display: none; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 4.5rem 0 0 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .content-1 .nav-bar ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        list-style: none;
+        position: static;
+        align-items: center;
+    }
+
+    .content-1 .nav-bar ul li a {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .content-1 .nav-bar ul li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:before {
+        background: transparent;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:hover::before {
+        background: transparent;
+    }
+
+    .content-1 .header .checkbtn {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: white;
+        z-index: 3;
+    }
+
+    .content-1 .header .checkbtn i {
+        font-size: 2.5rem;
+    }
+
+    .content-1 .nav-icon {
+        margin: 0 10rem 0 0;
+    }
+
+    #check:checked ~ .nav-bar {
+        display: flex;
+    }
+
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: white;
+        
+    }
+
+    .content-1 .header.scrolled .checkbtn {
+        color:#8c744c;
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: white;
+    }
+
+    .content-1 .header.scrolled .bx:hover {
+        color: darkgray;
+    }
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+        width: 100%;
+        background-color: #8c744c;
+}
+    .gallery {
+        height: auto;
+    }
+    .gallerypicture1 img {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 992px) {
+    .gallerypicture1 img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .content-1 .header {
+        justify-content: space-between;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+
+    .content-1 .nav-bar {
+        display: none; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 4.5rem 0 0 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .content-1 .nav-bar ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        list-style: none;
+        position: static;
+        align-items: center;
+    }
+
+    .content-1 .nav-bar ul li a {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .content-1 .nav-bar ul li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:before {
+        background: transparent;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:hover::before {
+        background: transparent;
+    }
+
+    .content-1 .header .checkbtn {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: white;
+        z-index: 3;
+    }
+
+    .content-1 .header .checkbtn i {
+        font-size: 2.5rem;
+    }
+
+    .content-1 .nav-icon {
+        margin: 0 10rem 0 0;
+    }
+
+    #check:checked ~ .nav-bar {
+        display: flex;
+    }
+
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: white;
+        
+    }
+
+    .content-1 .header.scrolled .checkbtn {
+        color:#8c744c;
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: white;
+    }
+
+    .content-1 .header.scrolled .bx:hover {
+        color: darkgray;
+    }
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+        width: 100%;
+        background-color: #8c744c;
+}
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .content-1 .header {
+        justify-content: space-between;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+
+    .content-1 .nav-bar {
+        display: none; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 4.5rem 0 0 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .content-1 .nav-bar ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        list-style: none;
+        position: static;
+        align-items: center;
+    }
+
+    .content-1 .nav-bar ul li a {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .content-1 .nav-bar ul li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:before {
+        background: transparent;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:hover::before {
+        background: transparent;
+    }
+
+    .content-1 .header .checkbtn {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: white;
+        z-index: 3;
+    }
+
+    .content-1 .header .checkbtn i {
+        font-size: 2.5rem;
+    }
+
+    .content-1 .nav-icon {
+        margin: 0 10rem 0 0;
+    }
+
+    #check:checked ~ .nav-bar {
+        display: flex;
+    }
+
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: white;
+        
+    }
+
+    .content-1 .header.scrolled .checkbtn {
+        color:#8c744c;
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: white;
+    }
+
+    .content-1 .header.scrolled .bx:hover {
+        color: darkgray;
+    }
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+        width: 100%;
+        background-color: #8c744c;
+}
+    .gallerypicture1 img {
+        width: 33.33%;
+    }
+    .gallery {
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .gallerypicture1 img {
+        width: 50%;
+    }
+    .gallery {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-1 .header {
+        justify-content: space-between;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+
+    .content-1 .nav-bar {
+        display: none; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 4rem 0 0 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .content-1 .nav-bar ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        list-style: none;
+        position: static;
+        align-items: center;
+    }
+
+    .content-1 .nav-bar ul li a {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .content-1 .nav-bar ul li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:before {
+        background: transparent;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:hover::before {
+        background: transparent;
+    }
+
+    .content-1 .header .checkbtn {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: white;
+        z-index: 3;
+    }
+
+    .content-1 .header .checkbtn i {
+        font-size: 2.5rem;
+    }
+
+    .content-1 .nav-icon {
+        margin: 0 10rem 0 0;
+    }
+
+    #check:checked ~ .nav-bar {
+        display: flex;
+    }
+
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: white;
+        
+    }
+
+    .content-1 .header.scrolled .checkbtn {
+        color:#8c744c;
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: white;
+    }
+
+    .content-1 .header.scrolled .bx:hover {
+        color: darkgray;
+    }
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+        width: 100%;
+        background-color: #8c744c;
+}
+    .gallery {
+        height: 545rem;
+    }
+    .gallery-nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-nav-bar ul li {
+        margin-bottom: 1rem;
+    }
+
+    .gallerypicture1 img {
+        width: 75%;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallerypicture1 img {
+        width: 100%;
+    }
+
+    .content-1 .header {
+        justify-content: space-between;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+
+    .content-1 .nav-bar {
+        display: none; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 4.5rem 0 0 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .content-1 .nav-bar ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        list-style: none;
+        position: static;
+        align-items: center;
+    }
+
+    .content-1 .nav-bar ul li a {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .content-1 .nav-bar ul li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:before {
+        background: transparent;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:hover::before {
+        background: transparent;
+    }
+
+    .content-1 .header .checkbtn {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: white;
+        z-index: 3;
+    }
+
+    .content-1 .header .checkbtn i {
+        font-size: 2.5rem;
+    }
+
+    .content-1 .nav-icon {
+        margin: 0 10rem 0 0;
+    }
+
+    #check:checked ~ .nav-bar {
+        display: flex;
+    }
+
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: white;
+        
+    }
+
+    .content-1 .header.scrolled .checkbtn {
+        color:#8c744c;
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: white;
+    }
+
+    .content-1 .header.scrolled .bx:hover {
+        color: darkgray;
+    }
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+        width: 100%;
+        background-color: #8c744c;
+}
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .content-1 .header {
+        justify-content: space-between;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+
+    .content-1 .nav-bar {
+        display: none; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 4.5rem 0 0 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .content-1 .nav-bar ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        list-style: none;
+        position: static;
+        align-items: center;
+    }
+
+    .content-1 .nav-bar ul li a {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .content-1 .nav-bar ul li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:before {
+        background: transparent;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:hover::before {
+        background: transparent;
+    }
+
+    .content-1 .header .checkbtn {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: white;
+        z-index: 3;
+    }
+
+    .content-1 .header .checkbtn i {
+        font-size: 2.5rem;
+    }
+
+    .content-1 .nav-icon {
+        margin: 0 10rem 0 0;
+    }
+
+    #check:checked ~ .nav-bar {
+        display: flex;
+    }
+
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: white;
+        
+    }
+
+    .content-1 .header.scrolled .checkbtn {
+        color:#8c744c;
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: white;
+    }
+
+    .content-1 .header.scrolled .bx:hover {
+        color: darkgray;
+    }
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+        width: 100%;
+        background-color: #8c744c;
+}
+    .gallerypicture1 img {
+        width: 33.33%;
+    }
+    .gallery {
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .gallerypicture1 img {
+        width: 50%;
+    }
+    .gallery {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-1 .header {
+        justify-content: space-between;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+
+    .content-1 .nav-bar {
+        display: none; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 4.5rem 0 0 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .content-1 .nav-bar ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        list-style: none;
+        position: static;
+        align-items: center;
+    }
+
+    .content-1 .nav-bar ul li a {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .content-1 .nav-bar ul li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:before {
+        background: transparent;
+    }
+
+    .content-1 .nav-bar ul li .nav-list:hover::before {
+        background: transparent;
+    }
+
+    .content-1 .header .checkbtn {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: white;
+        z-index: 3;
+    }
+
+    .content-1 .header .checkbtn i {
+        font-size: 2.5rem;
+    }
+
+    .content-1 .nav-icon {
+        margin: 0 10rem 0 0;
+    }
+
+    #check:checked ~ .nav-bar {
+        display: flex;
+    }
+
+    .header.scrolled {
+        background: #e7dfd7;
+    }
+
+    .header.scrolled .nav-bar ul li a{
+        color: white;
+        
+    }
+
+    .content-1 .header.scrolled .checkbtn {
+        color:#8c744c;
+    }
+
+    .content-1 .header.scrolled .reserve {
+        background:#8c744c;
+        color: white;
+    }
+
+    .content-1 .header.scrolled .reserve:hover {
+        color: white;
+    }
+
+    .content-1 .header.scrolled .bx:hover {
+        color: darkgray;
+    }
+
+    .content .header.scrolled ul li .nav-list:hover::before {
+        color: black;
+    }
+
+    .content-1 .header.header.scrolled .logo a{
+        color: #8c744c;
+    }
+
+    .content-1 .header.scrolled .nav-bar ul li .nav-list:hover::before {
+        width: 100%;
+        background-color: #8c744c;
+    }
+    .gallery {
+        height: auto;
+    }
+    .gallerypicture1 img {
+        width: 100%;
+    }
+}
+
+    </style>
+
+
+<section class="content-1">
+    <header class="header">
+        <div class="logo">
+            <a href="#">Dusit</a>
+        </div>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class='bx bx-menu'></i>
+        </label>
+
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="home.html" class="nav-list">Welcome</a></li>
+                <li><a href="gallery.html" class="nav-list">Gallery</a></li>
+                <li><a href="offers.html" class="nav-list">Offers</a></li>
+                <li><a href="suites.html" class="nav-list">Suites</a></li>
+                <li><a href="cuisine.html" class="nav-list">Cuisines</a></li>
+                <li><a href="contact.html" class="nav-list">Contact</a></li>
+                <li><a href="#" class="reserve">RESERVE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <div class="main-content-1">
+            <div class="content-home-3">Gallery</div>
+        </div>
+    </section>
+    <br><br>
+    <section class="gallery">
+        <div class="gallery-nav-bar">
+            <ul>
+                <li><a href="gallery.html" class="nav-list-gallery">Overview</a></li>
+                <li><a href="gallery2.html" class="nav-list-gallery">Rooms</a></li>
+                <li><a href="gallery3.html" class="nav-list-gallery active">Dining</a></li>
+                <li><a href="gallery4.html" class="nav-list-gallery">Facilities</a></li>
+            </ul>
+        </div>
+
+        <div class="gallerypicture1">
+            <img src="Image/Dining1.jpg">
+            <img src="Image/Dining2.jpg">
+            <img src="Image/Dining3.jpg">
+        </div>
+        <div class="gallerypicture1">
+            <img src="Image/Dining4.jpg">
+            <img src="Image/Dining5.jpg">
+            <img src="Image/Dining6.png">
+        </div>
+        <div class="gallerypicture1">
+            <img src="Image/Dining7.png">
+            <img src="Image/Dining8.png">
+            <img src="Image/Dining9.png">
+        </div>
+        <div class="gallerypicture1">
+            <img src="Image/Dining10.png">
+            <img src="Image/Dining11.jpg">
+            <img src="Image/Dining12.jpg">
+        </div>
+        <div class="gallerypicture1">
+            <img src="Image/Dining13.jpg">
+            <img src="Image/Dining14.jpg">
+            <img src="Image/Dining15.jpg">
+        </div>
+        <div class="gallerypicture1">
+            <img src="Image/Dining16.jpg">
+            <img src="Image/Dining17.png">
+            <img src="Image/Dining18.png">
+        </div>
+        <div class="gallerypicture1">
+            <img src="Image/Dining19.jpg">
+            <img src="Image/Dining20.jpg">
+        </div>
+
+
+    </section>
+
+    <section id="bookingFormSection">
+        <div id="bookingModal" class="modal">
+            <div class="modal-content">
+                <form id="bookingForm">
+                <span class="close">&times;</span>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="checkin">Check-in Date:</label>
+                    <input type="date" id="checkin" name="checkin" required><br>
+                    <label for="checkout">Check-out Date:</label>
+                    <input type="date" id="checkout" name="checkout" required><br>
+                    <label for="roomType">Room Type:</label>
+                    <select id="roomType" name="roomType" required>
+                        <option value="">Select Room Type</option>
+                        <option>Dusit Room King</option>
+                        <option>Dusit Room Twin</option>
+                        <option>Premier King</option>
+                        <option>Premier Twin</option>
+                        <option>Deluxe Suite King</option>
+                        <option>Deluxe Suite Twin</option>
+                        <option>Premier Exevutive Suite King</option>
+                        <option>Club Premier Exevutive Suite King</option>
+                    </select><br><br>
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer-distributed">
+        <div class="footer-left">
+
+            <h3>Dusit</h3>
+
+            <p class="footer-links">
+                <a href="home.html" class="link-1">Welcome</a>
+                        
+                <a href="gallery.html">Gallery</a>
+            
+                <a href="offers.html">Offers</a>
+            
+                <a href="suites.html">Suites</a>
+                
+                <a href="cuisine.html">Cuisines</a>
+
+                <a href="contact.html">Contact</a>
+
+                
+            </p>
+
+            <p class="footer-company-name">Dusit Thani Manila © 2024</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Ayala Centre, 1223 Makati City</span> Metro Manila, Philippines</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+63 (2) 7238 8888</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:dtmn@dusit.com">dtmn@dusit.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>Our Hotel</span>
+                Discover the pinnacle of luxury and heritage at Dusit Thani Manila. Experience gracious Thai hospitality intertwined with Filipino warmth in our 5-star hotel located in the heart of Makati. 
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="facebook.com"><i class="fa fa-facebook"></i></a>
+                <a href="twitter.com"><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<script>
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            const logo = document.querySelector('.header .logo img');
+
+        if (window.scrollY > 300 ) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+            }
+        });
+        
+        const nav = document.querySelector(".header");
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener("scroll", () => {
+            if (lastScrollY < window.scrollY) {
+            nav.classList.add("header--hidden");
+            } else {
+            nav.classList.remove("header--hidden");
+            }
+
+            lastScrollY = window.scrollY;
+        });
+
+                // Function to show booking modal
+                function showBookingModal() {
+        var modal = document.getElementById('bookingModal');
+        modal.style.display = 'block';
+        }
+
+        // Function to close booking modal
+        function closeBookingModal() {
+        var modal = document.getElementById('bookingModal');
+        modal.style.display = 'none';
+        }
+
+        // Event listener for the reserve button to show booking modal
+        var reserveButton = document.querySelector('.reserve');
+        reserveButton.addEventListener('click', showBookingModal);
+
+        // Event listener for close button
+        var closeButton = document.querySelector('.close');
+        closeButton.addEventListener('click', closeBookingModal);
+
+        // Function to handle form submission
+        function handleBooking(event) {
+        event.preventDefault(); 
+
+        alert('Booking Successful!');
+        closeBookingModal();
+        }
+
+        // Event listener for the form submission
+        var bookingForm = document.getElementById('bookingForm');
+        bookingForm.addEventListener('submit', handleBooking);
+
+
+        // Event listener for the form submission
+        var bookingForm = document.getElementById('bookingForm');
+        bookingForm.addEventListener('submit', handleBooking);
+
+        // Rating Feedback
+        const feedbackLink = document.getElementById('feedbackLink');
+        const feedbackModal = document.getElementById('feedbackModal');
+        const closeModal = document.getElementById('closeModal');
+        const stars = document.querySelectorAll('.star');
+        const feedbackMessage = document.getElementById('feedbackMessage');
+        let selectedRating = 0;
+
+        // Open modal when feedback link is clicked
+        feedbackLink.onclick = function(event) {
+            event.preventDefault();
+            feedbackModal.style.display = "block";
+        }
+
+        // Close modal when close button is clicked
+        closeModal.onclick = function() {
+            feedbackModal.style.display = "none";
+        }
+
+        // Close modal when clicking outside the modal content
+        window.onclick = function(event) {
+            if (event.target == feedbackModal) {
+                feedbackModal.style.display = "none";
+            }
+        }
+
+</script>
